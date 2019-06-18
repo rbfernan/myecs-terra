@@ -61,9 +61,9 @@ After `terraform apply` completes, it will output the URLs of the ELBs of the ng
 The following infrastructure should be created:
 
 - Auto Scaling group (ecs-my-nginx) with 3 EC2 instances (across 3 availability zones) for a given region
-- Load Balancer (my-nginx-elb)
-- Load Balancer (my-nginx-elb) and EC2 (ecs-my-nginx) security groups
 - ECS Cluster (ecs-my-nginx)
+- Load Balancer (my-nginx-elb)
+- Load Balancer (my-nginx-elb)/EC2 (ecs-my-nginx) security groups
 - ECS Service (my-nginx) and Task (with 3 nginx containers)
 
 Note: For simplicity the current version is deploying against the default vpc configured for your aws account.
@@ -83,4 +83,4 @@ Or for destroying it directly:
 ## TO DOs
  - Configure a new vpc for the ECS cluster (instead of using the default)
  - Configure auto scaling for the ECS cluster
- - Configure auto scaling for the ECS Service Task
+ - Configure auto scaling for the ECS Service Tasks
