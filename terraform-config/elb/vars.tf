@@ -22,6 +22,7 @@ variable "instance_port" {
 
 variable "health_check_path" {
   description = "The path on the instance the ELB can use for health checks. Do NOT include a leading slash."
+  default = "index.html"
 }
 
 # ---------------------------------------------------------------------------------------------------------------------
