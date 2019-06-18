@@ -1,9 +1,20 @@
 #  Local .terraform directories
 **/.terraform/*
-
 # .tfstate files
 *.tfstate
 *.tfstate.*
-
-# .tfvars files
+# .tfvars 
+files
 *.tfvars
+# Ignore all logfiles and tempfiles.
+/log/*
+!/log/.keep
+*.log
+/tmp
+# Ignore OS X files
+.DS_Store
+#vagrant
+.vagrant
+#Others
+*.zip
+mysecrets.env
