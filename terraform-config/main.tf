@@ -63,7 +63,7 @@ module "my_nginx_elb" {
   subnet_ids = "${data.aws_subnet.default.*.id}"
 
   instance_port = "${var.my_nginx_port}"
-  health_check_path = "health"
+  health_check_path = "index.html"
 }
 
 
