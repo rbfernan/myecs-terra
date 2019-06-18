@@ -47,7 +47,7 @@ module "my_nginx" {
   image_version = "${var.my_nginx_version}"
   cpu = 256
   memory = 512
-  desired_count = 2
+  desired_count = 3
 
   container_port = "${var.my_nginx_port}"
   host_port = "${var.my_nginx_port}"
