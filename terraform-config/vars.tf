@@ -15,12 +15,12 @@ variable "key_pair_name" {
 
 variable "my_nginx_image" {
   description = "The name of the Docker image to deploy for the My Nginx (e.g. nginx:alpine)"
-  default = "nginx:alpine"
+  default = "nginx"
 }
 
 variable "my_nginx_version" {
   description = "The version (i.e. tag) of the Docker container to deploy for the My Nginx (e.g. latest, 12345)"
-  default = "latest"
+  default = "alpine"
 }
 
 variable "my_nginx_port" {
