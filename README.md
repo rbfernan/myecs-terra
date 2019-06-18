@@ -32,8 +32,6 @@ The myecs-terra test chef recipe will install  the required softwares  into the 
 
 ### Config Setup
 
-1. Sign up for an [AWS account](https://aws.amazon.com/)
-1. Install [Terraform](https://www.terraform.io/).
 1. `cd terraform-config`
 1. Open `vars.tf`, set the environment variables specified at the top of the file, and feel free to tweak any of the
    other variables to your liking.
