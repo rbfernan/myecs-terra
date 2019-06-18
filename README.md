@@ -1,7 +1,7 @@
 # My ECS-Terraform Sample
 
 This project contains [Terraform](https://www.terraform.io/) configurations to deploy [Docker](https://www.docker.com/)
-images of the [nginx]() using Amazon's [EC2 Container Service (ECS)](https://aws.amazon.com/ecs/)
+images of the [nginx:alpine](https://hub.docker.com/_/nginx/) using Amazon's [EC2 Container Service (ECS)](https://aws.amazon.com/ecs/)
 
 ### Requirements
 If you already have a system with Terraform installed, please skype to the Clone MyECS-Terra section.
@@ -28,10 +28,12 @@ Execute the steps bellow only if you are running the ubuntu-18.05 bionic virtual
 
 **Note**: Run `vagrant destroy` in case you want to remove this VM from your system later on.
 
-The myecs-terra test chef recipe will install  the required softwares  into the VM and create the `/myecs-terra` diretctory (linking it to `<your project>` directory in the host system ).
+The myecs-terra test chef recipe will install  the required softwares  into the VM and create the `/ecs-terra` diretctory (linking it to `<your project>` directory in the host system ).
 
 ### Config Setup
 
+1. SSH to the VM `vagrant ssh` and switch to root user `sudo su -`  (if running on the virtualbox env)
+2. Go to the install directory  (e.g `cd /ecs-terra/`)
 1. `cd terraform-config`
 1. Open `vars.tf`, set the environment variables specified at the top of the file, and feel free to tweak any of the
    other variables to your liking.
@@ -67,7 +69,7 @@ The following infrastructure should be created:
 Note: For simplicity the current version is deploying against the default vpc configured for your aws account.
 
 
-### Destroying the nginx cluster
+### Destroying the created infrastructure
 
 Run the command bellow to visualize what elements will be destroyed:
 
